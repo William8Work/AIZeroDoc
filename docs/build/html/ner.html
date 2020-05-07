@@ -1,0 +1,460 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>NER (Named Entity Recogition) &mdash; AIZero.org 0.4.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support" href="support.html" />
+    <link rel="prev" title="Account Management" href="account.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> AIZero.org
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">AIZero Services - Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">Account Management</a></li>
+</ul>
+<p class="caption"><span class="caption-text">AIZero Services</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NER (Named Entity Recogition)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api-accounts-and-access-tokens">1. API Accounts and Access Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ner-named-entity-recognition">2. NER - Named Entity Recognition</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Need Help?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AIZero.org</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>NER (Named Entity Recogition)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ner-named-entity-recogition">
+<h1>NER (Named Entity Recogition)<a class="headerlink" href="#ner-named-entity-recogition" title="Permalink to this headline">¶</a></h1>
+<p>Named entity recognition (NER) , also known as entity chunking/extraction , is a popular technique used in information extraction to identify and segment the named entities and classify or categorize them under various predefined classes. These named entities typically represent real-world objects like people, places, organization, and so on, which are often denoted by proper names.</p>
+<div class="section" id="api-accounts-and-access-tokens">
+<h2>1. API Accounts and Access Tokens<a class="headerlink" href="#api-accounts-and-access-tokens" title="Permalink to this headline">¶</a></h2>
+<p>In order to access the AIZero API services, you need to create an account and receive access tokens. The access token needs to be present in every single API calls into AIZero services in order to ensure proper authentication.</p>
+</div>
+<div class="section" id="ner-named-entity-recognition">
+<h2>2. NER - Named Entity Recognition<a class="headerlink" href="#ner-named-entity-recognition" title="Permalink to this headline">¶</a></h2>
+<p>With a given blob of text, the NER service can return a list of identified entities.</p>
+<p><strong>1.1 NER - API Details</strong></p>
+<p>NER API can be interacted with HTTPS Restful API through standard method.</p>
+<p><strong>API URL</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Section</p></th>
+<th class="head"><p>Values</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>URL</p></td>
+<td><p><a class="reference external" href="https://nlp.aizero.org/ner">https://nlp.aizero.org/ner</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>HTTP Method</p></td>
+<td><p>POST</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Header Parameters</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Values</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Content-Type</p></td>
+<td><p>application/json</p></td>
+</tr>
+<tr class="row-odd"><td><p>Authorization</p></td>
+<td><p>token xxxxxxxxxx</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required Parameters</strong></p>
+<p>Included in the HTTP REST method, the following parameters are required to make a successful NER API call:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="s2">&quot;kubecon 2020 in Boston.&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Status Codes</strong></p>
+<p>Standard HTTP status codes are provided as the results of the API calls:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">200</span>     <span class="n">Status</span> <span class="n">OK</span><span class="o">.</span> <span class="n">Check</span> <span class="n">the</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span> <span class="k">for</span> <span class="n">the</span> <span class="n">results</span><span class="o">.</span>
+
+<span class="mi">404</span>     <span class="n">Unauthorized</span><span class="o">.</span> <span class="n">Either</span> <span class="n">the</span> <span class="n">Access</span> <span class="n">Code</span> <span class="ow">is</span> <span class="n">missing</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">header</span><span class="p">,</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">code</span> <span class="ow">is</span> <span class="n">invalid</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Response Sample</strong></p>
+<p>The NER results are represented in the following response format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">extracted</span><span class="o">-</span><span class="n">text</span><span class="o">-</span><span class="kn">from</span> <span class="nn">input</span> <span class="k">as</span> <span class="n">name</span> <span class="n">entity</span><span class="p">],</span>
+<span class="s2">&quot;start_char&quot;</span><span class="p">:</span> <span class="n">position1</span><span class="p">,</span>
+<span class="s2">&quot;end_char&quot;</span><span class="p">:</span> <span class="n">position2</span><span class="p">,</span>
+<span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">NER</span> <span class="nb">type</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The label will return one of the following type.</p>
+<p><strong>1.2 Entity Types Supported</strong></p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">NER Entity Types</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>TYPE</p></th>
+<th class="head"><p>DESCRIPTION</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PERSON</p></td>
+<td><p>People, including fictional.</p></td>
+</tr>
+<tr class="row-odd"><td><p>NORP</p></td>
+<td><p>Nationalities or religious or political groups.</p></td>
+</tr>
+<tr class="row-even"><td><p>FAC</p></td>
+<td><p>Buildings, airports, highways, bridges, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ORG</p></td>
+<td><p>Companies, agencies, institutions, etc.</p></td>
+</tr>
+<tr class="row-even"><td><p>GPE</p></td>
+<td><p>Countries, cities, states.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LOC</p></td>
+<td><p>Non-GPE locations, mountain ranges, bodies of water.</p></td>
+</tr>
+<tr class="row-even"><td><p>PRODUCT</p></td>
+<td><p>Objects, vehicles, foods, etc. (Not services.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>EVENT</p></td>
+<td><p>Named hurricanes, battles, wars, sports events, etc.</p></td>
+</tr>
+<tr class="row-even"><td><p>WORK_OF_ART</p></td>
+<td><p>Titles of books, songs, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LAW Named</p></td>
+<td><p>documents made into laws.</p></td>
+</tr>
+<tr class="row-even"><td><p>LANGUAGE</p></td>
+<td><p>Any named language.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DATE</p></td>
+<td><p>Absolute or relative dates or periods.</p></td>
+</tr>
+<tr class="row-even"><td><p>TIME</p></td>
+<td><p>Times smaller than a day.</p></td>
+</tr>
+<tr class="row-odd"><td><p>PERCENT</p></td>
+<td><p>Percentage, including ”%“.</p></td>
+</tr>
+<tr class="row-even"><td><p>MONEY</p></td>
+<td><p>Monetary values, including unit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>QUANTITY</p></td>
+<td><p>Measurements, as of weight or distance.</p></td>
+</tr>
+<tr class="row-even"><td><p>ORDINAL</p></td>
+<td><p>first, second, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CARDINAL</p></td>
+<td><p>Numerals that do not fall under another type.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>1.3 Code Snippet</strong></p>
+<p>The following sample codes are for your reference only.</p>
+<p>Python:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">flaskapi</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FlaskAPI</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="n">APP_URL</span> <span class="o">=</span> <span class="s1">&#39;https://nlp.aizero.org/ner&#39;</span>
+
+<span class="c1"># replace the access_token with the real one. See the Account section for more details.</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;Authorization&#39;</span> <span class="p">:</span> <span class="s1">&#39;token </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">access_token</span><span class="p">)</span> <span class="p">}</span>
+
+<span class="n">test_content</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;az_text&quot;</span><span class="p">:</span> <span class="s2">&quot;Firing Mr. Strzok, however, removes a favorite target of Mr. Trump from the ranks of the F.B.I. and gives Mr. Bowdich and the F.B.I. director, Christopher A. Wray, a chance to move beyond the president</span><span class="se">\&#39;</span><span class="s2">s ire.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;az_file&quot;</span><span class="p">:</span> <span class="s2">&quot;empty-url&quot;</span>
+            <span class="p">}</span>
+    <span class="p">}</span>
+
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">APP_URL</span><span class="p">,</span>
+                            <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">test_content</span><span class="p">),</span>
+                            <span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+                            <span class="n">headers</span> <span class="o">=</span> <span class="n">header</span><span class="p">)</span>
+<span class="n">result_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Sample Response</strong></p>
+<p>An response sample is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;az_result&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Strzok&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_char&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+      <span class="s2">&quot;end_char&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+      <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PERSON&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Trump&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_char&quot;</span><span class="p">:</span> <span class="mi">61</span><span class="p">,</span>
+      <span class="s2">&quot;end_char&quot;</span><span class="p">:</span> <span class="mi">66</span><span class="p">,</span>
+      <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PERSON&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;F.B.I.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_char&quot;</span><span class="p">:</span> <span class="mi">89</span><span class="p">,</span>
+      <span class="s2">&quot;end_char&quot;</span><span class="p">:</span> <span class="mi">95</span><span class="p">,</span>
+      <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;ORG&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Bowdich&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_char&quot;</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span>
+      <span class="s2">&quot;end_char&quot;</span><span class="p">:</span> <span class="mi">117</span><span class="p">,</span>
+      <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PERSON&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;F.B.I.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_char&quot;</span><span class="p">:</span> <span class="mi">126</span><span class="p">,</span>
+      <span class="s2">&quot;end_char&quot;</span><span class="p">:</span> <span class="mi">132</span><span class="p">,</span>
+      <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;ORG&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Christopher A. Wray&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;start_char&quot;</span><span class="p">:</span> <span class="mi">143</span><span class="p">,</span>
+      <span class="s2">&quot;end_char&quot;</span><span class="p">:</span> <span class="mi">162</span><span class="p">,</span>
+      <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PERSON&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;az_process&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;begin_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-23 00:58:39.447206&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-23 00:58:40.388193&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;process_time&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:00.940987&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;xreference&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;x-id&quot;</span><span class="p">:</span> <span class="s2">&quot;something&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="support.html" class="btn btn-neutral float-right" title="Support" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="account.html" class="btn btn-neutral float-left" title="Account Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright AIZero.org
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #2980B9;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      color: #9b9b9b;
+      background: #343131;
+    }
+    
+    .wy-nav-content {
+      max-width: none;
+      padding: 2.5em 3.5em;
+}
+  </style>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% set title = _('AIZero - Home') %}
+{% block body %}
+  <h1>{{ _('Welcome to AIZero Services!') }}</h1>
+
+  <p>Welcome to AIZero, Easy AI for Everyone. We believe that there is a way for everyone to use AI easily. AIZero Services provides a list of artificial intelligence services through web service APIs so that every developer can use them easily for standard software applications to consume and integrate.
+
+  </p>  
+  
+  <p>   
+  <img class="biglogo" src="{{ pathto('_static/images/ai.jpeg', 1) }}">
+  </p>
+  
+  <h2 style="margin-bottom: 10 px">{%trans%}Benefits{%endtrans%}</h2>
+
+  <p>
+  <table  style="width:100%">
+        <tr>
+                <th>Zero Efforts!</th>
+                <th>Strong AI </th>
+                <th>Just Web APIs</th>
+        </tr>
+        <tr>
+                <td style="padding-right:10px;">
+                    You require ZERO data scientist skills to immediate use the AI for your business and applications.
+                </td>
+                <td>
+                    A comphensive list of AI services that leverage State-of-the-Art machine learning models. All advanced and cutting-edge logics are captured inside the services for you.
+                </td>
+                <td>
+                    Use these AI services just like your ordinary web services APIs. If you know HTTP GET, POST, if you know JSON, you can use the AI into your application in minutes!
+                </td>
+                
+        </tr>
+  </table>
+  </p>
+
+  <p>See the <a href="{{ pathto("contents") }}">{%trans%}table of contents{%endtrans%}</a>.</p>
+  
+
+{% endblock %}
