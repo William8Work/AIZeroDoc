@@ -1,0 +1,50 @@
+{
+  "az_result": [
+    {
+      "text": "Strzok",
+      "start_char": 11,
+      "end_char": 17,
+      "label": "PERSON"
+    },
+    {
+      "text": "Trump",
+      "start_char": 61,
+      "end_char": 66,
+      "label": "PERSON"
+    },
+    {
+      "text": "F.B.I.",
+      "start_char": 89,
+      "end_char": 95,
+      "label": "ORG"
+    },
+    {
+      "text": "Bowdich",
+      "start_char": 110,
+      "end_char": 117,
+      "label": "PERSON"
+    },
+    {
+      "text": "F.B.I.",
+      "start_char": 126,
+      "end_char": 132,
+      "label": "ORG"
+    },
+    {
+      "text": "Christopher A. Wray",
+      "start_char": 143,
+      "end_char": 162,
+      "label": "PERSON"
+    }
+  ],
+  "az_process": {
+    "begin_time": "2020-03-23 00:58:39.447206",
+    "end_time": "2020-03-23 00:58:40.388193",
+    "process_time": "0:00:00.940987"
+  },
+  "xreference": {
+    "x-id": "something"
+  }
+}
+
+

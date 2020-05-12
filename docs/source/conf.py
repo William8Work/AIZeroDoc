@@ -105,7 +105,8 @@ html_theme_options = {
 }
 
 html_theme_path = ["../.."]
-html_logo = "demo/static/logo-wordmark-light.svg"
+html_logo = "aizero.png"
+html_favicon = "aizero-favicon.png"
 
 html_additional_pages = {'index': 'index.html'}
 

@@ -11,7 +11,7 @@ All documents and sample codes of this site are under MIT Licenses.
 Available Services
 ------------------
 
-1. NER - Named Entity Recogition
+1. :doc:`NER (Named Entity Recogition)<ner>`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Named entity recognition (NER) , also known as entity chunking/extraction , is a popular technique used in information extraction to identify and segment the named entities and classify or categorize them under various predefined classes. These named entities typically represent real-world objects like people, places, organization, and so on, which are often denoted by proper names. See more details here :doc:`ner`.

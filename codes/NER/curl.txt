@@ -1,0 +1,12 @@
+curl -X POST \
+  --url https://nlp.aizero.org/ner \
+  -H "Authorization: bearer tokenprovidedbybitext" \
+  -H "Content-Type: application/json" \
+  --data \
+    '{ "content": { "az_text": "Firing Mr. Strzok, however, removes a favorite target of Mr. Trump from the ranks of the F.B.I. and gives Mr. Bowdich and the F.B.I. director, Christopher A. Wray, a chance to move beyond the presidents ire.", \
+    "az_file": "empty-url" } \
+    }'
+ 
+ 
+    
+    
